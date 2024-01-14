@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Survey form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+      .starrating input{
+        display:none;
+      }
+      .starrating input + label{
+        cursor: pointer;
+        color:#EEAC82;
+      }
+      .starrating input:checked + label ~ label{
+        color: #838383;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+     <form method="get" class="survey-form">
+        <div>
+          <div class="row ">
+             <label for="name">
+                 <strong>
+                  Name<sup><i class="fa-solid fa-star-of-life fa-xs" style="color:#ff364E"></i></sup>
+                  </strong> 
+            </label>
+                 <div class="col-md-4">
+                 <input type="text"  class="form-control" id="name" name="name" required>
+                 <div>First</div>
+             </div>
+             <div class="col-md-4">
+                 <input type="text" class="form-control" id="name" name="name" required>
+                 <div>Last</div>
+             </div>
+          </div>
+        </div>
+        <div>
+            <div class="col-md-8">
+            <label for="inputEmail" class="form-label">
+              <strong>
+                Email<sup><i class="fa-solid fa-star-of-life fa-xs" style="color:#ff364E"></i></sup>
+              </strong>           
+            </label>
+            <input type="email" class="form-control" id="inputEmail" name="email" required>
+            </div>
+       </div>
+        <div>
+          <div class="pt-2">
+            <strong>
+             Your Experience<sup>
+              <i class="fa-solid fa-star-of-life fa-xs" style="color:#ff364E"></i></sup>
+            </strong>
+            <div class="starrating">
+              <input type="radio" name="rating" id="r1" value="rating1">
+               <label for="r1" class="fa fa-star fa-xl" ></label>
+               <input type="radio" name="rating" id="r2" value="rating2">
+               <label for="r2" class="fa fa-star fa-xl"></label>
+               <input type="radio" name="rating" id="r3" value="rating3">
+               <label for="r3" class="fa fa-star fa-xl"></label>
+               <input type="radio" name="rating" id="r4" value="rating4">
+               <label for="r4" class="fa fa-star fa-xl"></label>
+               <input type="radio" name="rating" id="r5" value="rating5" checked>
+               <label for="r5" class="fa fa-star fa-xl"></label>
+               <p>Overall,how would you rate your experience with us? </p>
+            </div>
+           <div>
+            <div>
+              <strong>How satisfied are you with<sup>
+                <i class="fa-solid fa-star-of-life fa-xs" style="color:#ff364E"></i></sup>
+              </strong>
+            </div>
+           <div>
+             <div class="text-center">
+                <div class="row  bg-body rounded p-2 align-items-center">
+                <div class="col"></div> 
+                <div class="col">Very Unsatisfied</div>
+                <div class="col">Unsatisfied</div>
+                <div class="col">Neutral</div>
+                <div class="col">Satisfied</div>
+                <div class="col"> Very Satisfied</div>
+              </div>
+              <div class="row rounded p-2 align-items-center" style="background-color:#f1f1f1;">
+                  <div class="col d-flex justify-content-start">Purchase</div>
+                  <div class=" col">
+                       <input type="radio"
+                       
+                       id="PurchaseVeryUnsatisfied"
+                       name="Purchase" 
+                       value="veryUnsatisfied">
+               </div>
+               <div class="col">
+                     <input type="radio"
+                      
+                       id="PurchaseUnsatisfied"
+                       name="Purchase" 
+                       value="Unsatisfied" >
+              </div> 
+              <div class="col">
+                  <input type="radio"
+                  
+                  id="PurchaseNeutral"
+                  name="Purchase" 
+                  value="Neutral" >
+              </div>
+              <div class="col">
+                  <input type="radio"
+                  
+                  id="PurchaseSatisfied"
+                  name="Purchase" 
+                  value="satisfied">     
+              </div>
+              <div class="col">
+                  <input type="radio"
+                 
+                  id="PurchaseVerySatisfied"
+                  name="Purchase" 
+                  value=" verySatisfied" required>  
+              </div>
+              </div>
+              <div class="row  bg-body rounded p-2 align-items-center">
+                  <div class="col d-flex justify-content-start">Service</div>
+                  <div class=" col">
+                       <input type="radio"
+                       id="ServiceVeryUnsatisfied"
+                       name="Service" 
+                       value="veryUnsatisfied">
+               </div>
+               <div class="col">
+                     <input type="radio"
+                       id="ServiceUnsatisfied"
+                       name="Service" 
+                       value="Unsatisfied" >
+              </div> 
+              <div class="col">
+                  <input type="radio"
+                  id="ServiceNeutral"
+                  name="Service" 
+                  value="Neutral" >
+              </div>
+              <div class="col">
+                  <input type="radio"
+                  id="ServiceSatisfied"
+                  name="Service" 
+                  value="satisfied">     
+              </div>
+              <div class="col">
+                  <input type="radio"
+                  id="ServiceVerySatisfied"
+                  name="Service" 
+                  value=" verySatisfied" required>  
+              </div>
+              </div>
+              <div class="row rounded p-2 align-items-center" style="background-color:#f1f1f1;">
+                  <div class="col d-flex justify-content-start">Company Overall</div>
+                  <div class=" col">
+                       <input type="radio"
+                       id="CompanyOverallVeryUnsatisfied"
+                       name="CompanyOverall" 
+                       value="veryUnsatisfied">
+                      </div>
+                   <div class="col">
+                     <input type="radio"
+                       id="CompanyOverallUnsatisfied"
+                       name="CompanyOverall" 
+                       value="Unsatisfied">
+                  </div> 
+                  <div class="col">
+                    <input type="radio"
+                     id="CompanyOverallNeutral"
+                     name="CompanyOverall" 
+                     value="Neutral">
+                 </div>
+                <div class="col">
+                    <input type="radio"
+                    id="CompanyOverallSatisfied"
+                    name="CompanyOverall" 
+                    value="satisfied" >     
+              </div>
+              <div class="col">
+                  <input type="radio"
+                  id="CompanyOverallVerySatisfied"
+                  name="CompanyOverall" 
+                  value="verySatisfied" required>  
+              </div>
+           </div>
+         </div>
+         <div class="mt-3">
+              <strong>How likely are you to<sup><i class="fa-solid fa-star-of-life fa-xs" style="color:#ff364E"></i></sup></strong>
+            </div>
+             <div class= "text-center">
+                <div class="row bg-body rounded p-2 align-items-center">
+                  <div class="col"></div> 
+                  <div class="col">Very Unlikely</div>
+                  <div class="col">Unlikely</div>
+                  <div class="col">Neutral</div>
+                  <div class="col">Likely</div>
+                  <div class="col"> Very Likely</div>
+                </div>
+    
+               <div class="row rounded p-2 align-items-center" style="background-color:#f1f1f1;">
+                    <div class="col d-flex justify-content-start">Buy from us again</div>
+                    <div class=" col">
+                         <input type="radio"
+                         id="productVeryUnlikely"
+                         name="buyFromUs" 
+                         value="veryUnlikely"  required>
+                 </div>
+                 <div class="col">
+                       <input type="radio"
+                         id="productUnlikely"
+                         name="buyFromUs"  
+                         value="Unlikely">
+                </div> 
+                <div class="col">
+                    <input type="radio"
+                    id="productNeutral"
+                    name="buyFromUs"  
+                    value="Neutral">
+                </div>
+                <div class="col">
+                    <input type="radio"
+                    id="productLikely"
+                    name="buyFromUs"  
+                    value="Likely">     
+                </div>
+                <div class="col">
+                    <input type="radio"
+                    id="productVeryLikely"
+                    name="buyFromUs"  
+                    value="veryLikely">  
+                </div>
+                </div>
+                <div class="row rounded p-2 align-items-center">
+                    <div class="col d-flex justify-content-start">Recommend our product to others</div>
+                    <div class=" col">
+                         <input type="radio"
+                         id="recommendVeryUnlikely"
+                         name="recommendOurProduct" 
+                         value="veryUnlikely"required>
+                 </div>
+                 <div class="col">
+                       <input type="radio"
+                         id="recommendUnlikely"
+                         name= "recommendOurProduct"  
+                         value="Unlikely">
+                </div> 
+                <div class="col">
+                    <input type="radio"
+                    id="recommendNeutral"
+                    name= "recommendOurProduct"  
+                    value="Neutral">
+                </div>
+                <div class="col">
+                    <input type="radio"
+                    id="recommendLikely"
+                    name= "recommendOurProduct" 
+                    value="Likely">     
+                </div>
+                <div class="col">
+                    <input type="radio"
+                    id="recommendVeryLikeky"
+                    name= "recommendOurProduct" 
+                    value=" veryLikely">  
+                </div>
+                </div>
+                <div class="row rounded p-2 align-items-center" style="background-color:#f1f1f1;">
+                   <div class="col d-flex justify-content-start">Recommend our company to others</div>
+                    <div class=" col">
+                        <input type="radio"
+                         id="CompanyVeryUnlikely"
+                         name="recommendOurCompany" 
+                         value="veryUnlikely" required>
+                        </div>
+                     <div class="col">
+                       <input type="radio"
+                         id="CompanyUnlikely"
+                         name="recommendOurCompany" 
+                         value="Unlikely">
+                      </div> 
+                    <div class="col">
+                    <input type="radio"
+                    id="CompanyNeutral"
+                    name="recommendOurCompany" 
+                    value="Neutral">
+                </div>
+                <div class="col">
+                    <input type="radio"
+                    id="CompanyLikely"
+                    name="recommendOurCompany" 
+                    value="likely">     
+                </div>
+                <div class="col">
+                    <input type="radio"
+                    id="CompanyVeryLikely"
+                    name="recommendOurCompany" 
+                    value=" veryLikely">  
+                   </div>
+                 </div>
+                </div>
+
+                <div class="row pt-3">
+                    <h6>Additional comments or suggestions</h6>
+                    <div class="col">
+                        <textarea class="form-control" id="Textarea" style="height: 100px" name="suggestions" value=""></textarea>
+                    </div>
+                  </div>
+                </div>
+               </div>
+          <div class="mt-3">
+            <button type="submit" class="p-2" 
+            style="background-color:#f1f1f1;
+            font-family: 'Times New Roman', Times, serif;">Submit</button>
+          </div>
+        </div>
+     </form>
+        
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+  </body>
+</html>
